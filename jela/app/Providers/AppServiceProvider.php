@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Jelovnik\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
