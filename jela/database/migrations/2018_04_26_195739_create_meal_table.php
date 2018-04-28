@@ -15,10 +15,36 @@ class CreateMealTable extends Migration
     {
         Schema::create('meal', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('title')->unique();
             $table->string('description');
             $table->string('status');
+			$table->string('category');
+			$table->string('lang');
         });
+		Schema::create('category',function (Blueprint $table){
+			$table->increments('id');
+			$table->string('title')->unique();
+			$table->string('slug');
+			$table->string('lang');
+		});
+		Schema::create('ingredients',function (Blueprint $table){
+			$table->increments('id');
+			$table->string('mealTitle');
+			$table->string('title');
+			$table->string('slug');
+			$table->string('lang');
+		});	
+		Schema::create('translation',function(Blueprint $table){
+			$table->increments('id');
+			$table->string('lang');
+			$table->string('word');
+			$table->string('translation');
+		});
+		Schema::create('languages',function(Blueprint $table){
+			$table->increments('id');
+			$table->string('lang')->unique();
+			
+		});
     }
 
     /**
@@ -29,5 +55,7 @@ class CreateMealTable extends Migration
     public function down()
     {
         Schema::dropIfExists('meal');
+		Schema::dropIfExists('category');
+		Schema::dropIfExists('ingredients');
     }
 }
