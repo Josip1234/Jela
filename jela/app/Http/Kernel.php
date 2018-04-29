@@ -62,5 +62,6 @@ class Kernel extends HttpKernel
 		'prijava'=>\App\Http\Middleware\prijava::class,
 		'First' => \App\Http\Middleware\FirstMiddleware::class,
 		'Second'=>\App\Http\Middleware\SecondMiddleware::class,
+		'jelo'=>\App\Http\Middleware\JeloMiddleware::class,
     ];
 }
