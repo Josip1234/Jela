@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	
+	$links= \App\Link::all();
+	
+    return view('welcome',['links'=>$links]);
 });
 
 Route::get('ID/{id}',function($id){
@@ -37,3 +40,8 @@ Route::get('/register',function(){
 });
 Route::post('/user/register',array('uses'=>'UserRegistration@postRegister'));
 Route::get('/jelo','jelo@jelo');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

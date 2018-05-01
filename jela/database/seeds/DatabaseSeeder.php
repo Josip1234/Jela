@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +21,9 @@ DB::table('users')->insert(['name'=>$faker->name,'pass'=>bcrypt('secret')
 
 */
         // $this->call(UsersTableSeeder::class);
+		$this->call(LinksTableSeeder::class);
+		//$faker = Faker\Factory::create();
+		
+		
     }
 }

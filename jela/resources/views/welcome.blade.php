@@ -92,6 +92,9 @@
             </div>
         </div>
         <h2>Dobrodošli u laravel</h2>
+        @foreach ($links as $link)
+        <a href="{{$link->url}}">{{$link->title}}</a>
+        @endforeach
        
     </body>
 </html>
