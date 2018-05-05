@@ -11,7 +11,9 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {    //generate fake data here
+    {
+        $this->call(MealSeeder::class);
+        //generate fake data here
           /*
 
 
@@ -21,9 +23,9 @@ DB::table('users')->insert(['name'=>$faker->name,'pass'=>bcrypt('secret')
 
 */
         // $this->call(UsersTableSeeder::class);
-		$this->call(LinksTableSeeder::class);
+		//$this->call(LinksTableSeeder::class);
 		//$faker = Faker\Factory::create();
-		
+
 		
     }
 }
