@@ -3,11 +3,15 @@
 use Faker\Generator as Faker;
 
 
-$factory->define(App\Meals::class, function (Faker $faker) {
 
+
+
+
+$factory->define(App\Meals::class, function (Faker $faker) {
+    $faker->addProvider(new \FakerRestaurant\Provider\en_US\Restaurant($faker));
     return [
-        'title' => substr($faker->sentence(2), 0, -1),
-    'description' => substr($faker->sentence(2), 0, -1),
+        'title' => $faker->foodName(),
+    'description' => $faker->realText(200,2),
     'status'=>'created',
         //
     ];

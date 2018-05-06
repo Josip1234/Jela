@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(CategorySeeder::class);
         $this->call(MealSeeder::class);
         //generate fake data here
           /*
