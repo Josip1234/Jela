@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CategorySeeder::class);
         $this->call(MealSeeder::class);
+        $this->call(IngredientsTableSeeder::class);
+        $this->call(TagsTableSeeder::class);
         //generate fake data here
           /*
 
