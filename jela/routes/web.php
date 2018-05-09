@@ -49,3 +49,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+/*Route::get('/meals',function (){
+    return view('meals');
+});
+*/
+Route::get('/meals','IspisiSvaJela@ispis');
