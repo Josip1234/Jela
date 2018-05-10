@@ -11,7 +11,7 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Tags::class,30)->create();
+        factory(App\Tags::class,5)->create();
         //
     }
 }

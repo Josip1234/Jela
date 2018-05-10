@@ -11,7 +11,7 @@ class IngredientsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Ingredients::class,20)->create();
+        factory(App\Ingredients::class,5)->create();
         //
     }
 }

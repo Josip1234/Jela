@@ -15,7 +15,7 @@
         <li>{{$meal->title}}</li>
         <ul><li>{{$meal->description}}</li>
         <li>{{$meal->status}}</li>
-          
+
         </ul>
     @endforeach
 <ol>
