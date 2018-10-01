@@ -16,7 +16,9 @@
         "laravel/tinker": "^1.0",
         "league/factory-muffin": "^3.0",
         "philo/laravel-translate": "^2.0",
-        "willdurand/faker-bundle": "^1.4"
+        "symfony/psr-http-message-bridge": "^1.0",
+        "willdurand/faker-bundle": "^1.4",
+        "zendframework/zend-diactoros": "^1.7"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

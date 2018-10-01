@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Meals extends Model
 {
+
+
+
+
     //
 public function ingredients(){
     return $this->hasMany('App\Ingredients');
